@@ -2,9 +2,6 @@
 Run the following commands in your terminal.
 
 Clone the repo
-```bash
-git clone https://github.com/RisikaApS/ReactCodeChallenge
-```
 
 Install dependencies
 ```bash
