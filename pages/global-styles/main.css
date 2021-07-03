@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    --dark-color: #3e3e3e;
+    --red-color: #df2800;
+    --yellow-color: #ffdc64;
+    --green-color: #84d14e;
+    --box-shadow1: 0px 0px 8px 2px rgba(0, 0, 0, 0.2) 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
+    --box-shadow2: 0px 0px 8px 2px rgba(0, 0, 0, 0.1) 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-image: linear-gradient(to top, #a1c4fd 0%, #c2e9fb 100%);
+    min-height: 100vh;
+    color: var(--dark-color);
+}
+
+.search-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.no-companies {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.search-page input {
+    display: inline-block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+    height: 45px;
+    margin-right: 15px;
+}
+
+.search-page button {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;    
+    color: #fff;
+    background-color: #5b9aff;
+    border-color: #5b9aff;
+}
+
+.search-page input:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.search-page .companies-box, .management-box, .information-box, .highlights-box {
+    margin-top: 20px;
+    -webkit-box-shadow: var(--box-shadow1);
+    box-shadow: var(--box-shadow1);
+    background: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding: 15px 25px;
+}
+
+.search-page .companies-box,
+.management-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.management-box, .information-box, .highlights-box {
+    justify-content: start;
+    max-width: 95%;
+    margin: 25px auto;
+}
+
+.management-box h2,
+.information-box h2,
+.highlights-box h2 {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dfdfdf;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.management-box table {
+    width: 100%;
+}
+
+.management-box table tr{
+    height: 50px;
+}
+
+.search-page .companies-box a {
+    display: block;
+    margin: 10px 5px;
+    background: var(--dark-color);
+    border: 1px solid transparent;
+    padding: 15px;
+    color: #fff;
+    border-radius: .25rem;
+    text-decoration: none;
+    transition: all .2s ease;
+    font-weight: 500;
+    -webkit-box-shadow: var(--box-shadow2);
+    box-shadow: var(--box-shadow2);
+}
+
+.search-page .companies-box a .company-status{
+    display: block;
+    font-size: .85rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 2px;
+    color: #dfdfdf;
+    transition: all .2s ease;
+    }
+
+.search-page .companies-box a:hover {
+    color: var(--dark-color);
+    background: #fff;
+    border-color: var(--dark-color);
+}
+
+.search-page .companies-box a:hover .company-status {
+    color: #1e1e1e;
+}
+
+.information-box .company-information {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.information-box .company-information span {
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #dfdfdf;
+    transition: background .2s ease;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.information-box .company-information span:hover {
+    background: #f9fafa;
+}
+
+.information-box .company-information strong {
+    width: 220px;
+    display: inline-block;
+}
+
+.information-box h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.highlights-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.highlights-box .highlight {
+    max-width: 20%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 3px 10px;
+}
+
+.highlights-box .highlight p {
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.highlights-box .legend {
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.highlights-box .legend span {
+    display: flex;
+    font-size: .9rem;
+    font-weight: 500;
+    margin-left: 25px;
+    margin-top: 2px;
+}
+
+.highlights-box .legend span .color-box {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: #aaa;
+    margin-left: 5px;
+    margin-top: 0;
+}
+.highlights-box .legend span strong {
+    display: block;
+    width: 65px;
+}
+
+.highlights-box .legend span:nth-of-type(1) .color-box {
+    background-color: var(--red-color)
+}
+
+.highlights-box .legend span:nth-of-type(2) .color-box {
+    background-color: var(--green-color);
+}
+
+.back-home {
+    display: block;
+    max-width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+}

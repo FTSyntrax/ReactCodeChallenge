@@ -17,9 +17,11 @@ const Management = ({ relations }) => {
     ...management,
     ...boardOfDirectors,
   ])
-  const keys = Object.keys(managementData[0])
+
+  const keys = managementData.length > 0 ? Object.keys(managementData[0]) : []
   return (
-    <div>
+    <div className="management-box">
+      <h2>Management</h2>
       <table>
         <thead>
           <tr>

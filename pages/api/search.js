@@ -8,7 +8,12 @@ export default (req, res) => {
 
   if (query !== "") {
     searchResults = matchSorter(companies, query, {
-      keys: ["company_name", "local_organization_id.id", "phone", "email"],
+      keys: [
+        "company_name",
+        "local_organization_id.id",
+        "phone.phone_number",
+        "email.email",
+      ],
     })
   }
 
